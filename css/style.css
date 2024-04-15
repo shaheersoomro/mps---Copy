@@ -560,36 +560,8 @@ section {
   background-color: #f3f5fa;
 }
 
-.hero-title {
-  padding-bottom: 10px;
-}
-
-.hero-title h1 {
-  font-size: 624px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  position: relative;
-  color: #b99566;
-}
-
-
-.hero-title h1::after {
-  content: "";
-  position: relative;
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: #b99566;
-  bottom: 0;
-  
-}
-
 @media (max-width: 992px) {
-  .hero-title h1::after {
-    margin-left: auto;
-    margin-right: auto 
-  }
+  
 }
 
 .section-title p {
@@ -633,8 +605,88 @@ section {
   left: calc(50% - 20px);
 }
 
-.section-title p {
+.hero-title p {
   margin-bottom: 0;
+}
+
+.hero-title {
+  text-align: left;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.hero-title h1 {
+  font-size: xx-large !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #b99566 !important;
+  font-weight: bolder;
+}
+
+.hero-title h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: 0;
+}
+
+.hero-title h1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #000000;
+  bottom: 0;
+  left: 40px;
+}
+
+@media (max-width: 991px) {
+  .hero-title {
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+  }
+  
+  .hero-title h1 {
+    font-size: xx-large !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #b99566 !important;
+    font-weight: bolder;
+  }
+  
+  .hero-title h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  .hero-title h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #000000;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
 }
 
 /*--------------------------------------------------------------
