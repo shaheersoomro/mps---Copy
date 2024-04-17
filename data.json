@@ -1,0 +1,26 @@
+[
+    {
+        "image": "images/back.jpg",
+        "title": "Courts",
+        "date": "April 17, 2024",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis quis magna porttitor, id suscipit libero convallis."
+    },
+    {
+        "image": "images/cta-bg.jpg",
+        "title": "Regulatory & other authorities",
+        "date": "May 1, 2024",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis quis magna porttitor, id suscipit libero convallis."
+    },
+    {
+        "image": "images/cta-bg.jpg",
+        "title": "Regulatory & other authorities",
+        "date": "May 1, 2024",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis quis magna porttitor, id suscipit libero convallis."
+    },
+    {
+        "image": "images/back.jpg",
+        "title": "Courts",
+        "date": "April 17, 2024",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis quis magna porttitor, id suscipit libero convallis."
+    }
+]

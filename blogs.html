@@ -32,6 +32,25 @@
 
   <link href="css/style.css" rel="stylesheet">
 
+  <style>
+    .blog {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .blog img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px; /* Add spacing below the image */
+        }
+        .blog-info h4 {
+            margin-bottom: 5px; /* Add spacing below the title */
+        }
+        .blog-info p {
+            color: #fff; /* Set paragraph color */
+        }
+  </style>
+
 
 </head>
 
@@ -399,7 +418,10 @@
           </div>
 
 
-          <p>Welcome to our legal insights blog, your trusted source for expert legal advice and knowledge. Explore a variety of topics from business law to personal injury, crafted by our experienced legal team. Empower yourself with the knowledge you need to protect your rights and interests. Join us as we illuminate the path to legal understanding and empowerment.</p>
+          <p>Welcome to our legal insights blog, your trusted source for expert legal advice and knowledge. Explore a
+            variety of topics from business law to personal injury, crafted by our experienced legal team. Empower
+            yourself with the knowledge you need to protect your rights and interests. Join us as we illuminate the path
+            to legal understanding and empowerment.</p>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="#blogs" class="btn btn-get-started scrollto">Get Started</a>
           </div>
@@ -420,55 +442,19 @@
 
         <div class="section-title">
           <h2>Tranding Blogs</h2>
-          <p style="color:#fff;">Explore the latest trending blogs featuring insights, news, and discussions on Pakistan's official government institutes, bodies, and regulatory authorities</p>
+          <p style="color:#fff;">Explore the latest trending blogs featuring insights, news, and discussions on
+            Pakistan's official government institutes, bodies, and regulatory authorities</p>
         </div>
 
-        <div class="row">
+        <div class="row" id="contentRow">
 
-          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="blog d-flex align-items-start bg-dark">
-              <div class="blog-info">
-                <div>
-                  <img src="images/back.jpg" class="img-fluid">
-                </div>
-                <br>
-                <h4>Courts<span>April 17 2024</span></h4>
-                <p style="color:#fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis
-                  quis magna porttitor, id suscipit libero convallis.</p>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="blog d-flex align-items-start bg-dark">
-              <div class="blog-info">
-                <div>
-                  <img src="images/back.jpg" class="img-fluid">
-                </div>
-                <br>
-                <h4>Courts<span>April 17 2024</span></h4>
-                <p style="color:#fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis
-                  quis magna porttitor, id suscipit libero convallis.</p>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="blog d-flex align-items-start bg-dark">
-              <div class="blog-info">
-                <div>
-                  <img src="images/back.jpg" class="img-fluid">
-                </div>
-                <br>
-                <h4>Courts<span>April 17 2024</span></h4>
-                <p style="color:#fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis
-                  quis magna porttitor, id suscipit libero convallis.</p>
-              </div>
-            </div>
-          </div>
-          
 
-          
+
+
+
+
         </div>
       </div>
     </section>
@@ -664,6 +650,59 @@
           whatsappButton.style.display = 'none';
         }
       });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Function to create a column for each item in the data array
+      function createColumns(data) {
+        var contentRow = document.getElementById("contentRow");
+        data.forEach(function (item) {
+          var column = document.createElement("div");
+          column.className = "col-lg-6";
+          column.setAttribute("data-aos", "zoom-in");
+          column.setAttribute("data-aos-delay", "100");
+
+          var blogDiv = document.createElement("div");
+          blogDiv.className = "blog d-flex align-items-start bg-dark";
+
+          var blogInfoDiv = document.createElement("div");
+          blogInfoDiv.className = "blog-info";
+
+          var img = document.createElement("img");
+          img.src = item.image;
+          img.className = "img-fluid";
+
+          var title = document.createElement("h4");
+          title.textContent = item.title;
+          var date = document.createElement("span");
+          date.textContent = item.date;
+          title.appendChild(date);
+
+          var paragraph = document.createElement("p");
+          paragraph.textContent = item.paragraph;
+
+          blogInfoDiv.appendChild(img);
+          blogInfoDiv.appendChild(title);
+          blogInfoDiv.appendChild(paragraph);
+
+          blogDiv.appendChild(blogInfoDiv);
+          column.appendChild(blogDiv);
+
+          contentRow.appendChild(column);
+        });
+      }
+
+      // Fetch data from JSON file using AJAX
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var data = JSON.parse(xhr.responseText);
+          createColumns(data);
+        }
+      };
+      xhr.open("GET", "data.json", true);
+      xhr.send();
     });
 
   </script>
