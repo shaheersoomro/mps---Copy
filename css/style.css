@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -16,28 +15,37 @@ a:hover {
   color: #73c5eb;
   text-decoration: none;
 }
+
 .whatsapp-button {
-    position: fixed;
-    bottom: 15px;
-    right: 100px;
-    z-index: 999;
-    display: none; /* Initially hide the button */
-    width: 50px; /* Adjust the width and height of the button as needed */
-    height: 50px;
-    border-radius: 50%; /* Make it a circle */
-    background-color: #25D366; /* WhatsApp brand color */
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    overflow: hidden; /* Hide any overflow content */
+  position: fixed;
+  bottom: 15px;
+  right: 100px;
+  z-index: 999;
+  display: none;
+  /* Initially hide the button */
+  width: 50px;
+  /* Adjust the width and height of the button as needed */
+  height: 50px;
+  border-radius: 50%;
+  /* Make it a circle */
+  background-color: #25D366;
+  /* WhatsApp brand color */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  /* Hide any overflow content */
 }
 
 .whatsapp-button img {
-    width: 100%; /* Make the image fill the button */
-    height: auto; /* Preserve aspect ratio */
+  width: 100%;
+  /* Make the image fill the button */
+  height: auto;
+  /* Preserve aspect ratio */
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E; /* Darker shade of WhatsApp brand color on hover */
+  background-color: #128C7E;
+  /* Darker shade of WhatsApp brand color on hover */
 }
 
 h1,
@@ -409,7 +417,7 @@ h6 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-   
+
 }
 
 #hero .container {
@@ -429,9 +437,11 @@ h6 {
   margin-bottom: 50px;
   font-size: 24px;
 }
+
 #hero p {
   color: rgba(255, 255, 255, 1.0);
 }
+
 #hero .btn-get-started {
   font-weight: 500;
   font-size: 16px;
@@ -576,9 +586,7 @@ section {
   background-color: #f3f5fa;
 }
 
-@media (max-width: 992px) {
-  
-}
+@media (max-width: 992px) {}
 
 .section-title p {
   margin-bottom: 0;
@@ -670,7 +678,7 @@ section {
     padding-bottom: 30px;
     position: relative;
   }
-  
+
   .hero-title h1 {
     font-size: xx-large !important;
     font-weight: bold;
@@ -681,7 +689,7 @@ section {
     color: #b99566 !important;
     font-weight: bolder;
   }
-  
+
   .hero-title h1::before {
     content: "";
     position: absolute;
@@ -692,7 +700,7 @@ section {
     bottom: 1px;
     left: calc(50% - 60px);
   }
-  
+
   .hero-title h1::after {
     content: "";
     position: absolute;
@@ -754,7 +762,7 @@ section {
     padding-bottom: 30px;
     position: relative;
   }
-  
+
   .blog-title h1 {
     font-size: xx-large !important;
     font-weight: bold;
@@ -765,7 +773,7 @@ section {
     color: #b99566 !important;
     font-weight: bolder;
   }
-  
+
   .blog-title h1::before {
     content: "";
     position: absolute;
@@ -776,7 +784,7 @@ section {
     bottom: 1px;
     left: calc(50% - 60px);
   }
-  
+
   .blog-title h1::after {
     content: "";
     position: absolute;
@@ -1454,6 +1462,19 @@ section {
   margin-bottom: 5px;
   font-size: 20px;
   color: #b99566;
+}
+
+.blog h2 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: #b99566;
+}
+
+.blog ul li{
+  margin: 10px 0 0 0;
+  color: #fff;
+  font-size: 14px;
 }
 
 .blog span {
@@ -2155,10 +2176,21 @@ ul {
 }
 
 .cover {
-  background-image: url('../images/tax.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 50vh; /* Adjust as needed */
+  height: 50vh;
+  /* Adjust as needed */
   margin-bottom: 32px;
 }
+
+#blog1.cover {
+  background-image: url('../images/tax.jpg');
+}
+
+#blog2.cover {
+  background-image: url('../images/tax2.jpg');
+}
+
+
+
